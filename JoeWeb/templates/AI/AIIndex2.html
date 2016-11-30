@@ -1,0 +1,29 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="/Resources/css/tablecss.css" /> 
+</head>
+
+<div align="center">
+<body>
+
+<table id="customers">
+
+<tr>
+{% for i in columns_name %}
+    <th>{{ i }}</th>
+{% endfor %}
+</tr> 
+
+{% for row_data in new_user_data %}
+    <tr>
+    {% for i in row_data %}      
+            <td>{{ i }}</td>
+    {% endfor %}
+    </tr>
+{% endfor %}
+
+</table>
+
+</body>
+</div>
+</html>
